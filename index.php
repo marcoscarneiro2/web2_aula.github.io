@@ -1,5 +1,5 @@
 <?php 
-  include_once 'navbar.php';
+  include_once 'pages/navbar.php';
   session_start();
   ?>
     
@@ -11,5 +11,5 @@
     endif; ?>
 
     <?php 
-    include_once 'footer.php';
+    include_once 'pages/footer.php';
   ?>
