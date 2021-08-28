@@ -1,5 +1,15 @@
 <?php
+$servername = "127.0.0.1";
+$username = "root";
+$password = "";
+$banco = "lojaunisuam";
 
-$con = mysqli_connect("127.0.0.1","root","","lojaunisuam") or die('Não foi possível conectar');
-mysqli_set_charset($con, "utf-8")
+// Create connection
+$conn = new mysqli($servername, $username, $password,$banco);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error + "<br/>");
+}
+echo "Connected successfully<br/>";
 ?>

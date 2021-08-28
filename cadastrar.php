@@ -41,7 +41,7 @@ session_start();
         
         <!--FORMULÁRIO DE CADASTRO-->
         <div id="cadastro">
-          <form method="post" action="cadastro.php"> 
+          <form method="POST" action="php/cadastro.php"> 
             <h1>Cadastro</h1> 
 
             <?php if(isset($_SESSION["mensagem"])):
