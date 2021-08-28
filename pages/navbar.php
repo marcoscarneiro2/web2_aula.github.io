@@ -17,11 +17,11 @@
         <a class="navbar-brand" href="#">VagasParaTI-RJ</a>
       </div>
       <ul class="nav navbar-nav">
-        <li><a href="../index.php">Pagina Inicial</a></li>
-        <li><a href="pages/index.php">Vagas</a></li>
-        <li><a href="pages/index.php">Perfil</a></li>
-        <li><a href="pages/sobre.php">Sobre</a></li>
-        <li><a href="pages/cadastrar.php">Cadastrar / Login</a></li>
+        <li><a href="./index.php">Pagina Inicial</a></li>
+        <li><a href="./index.php">Vagas</a></li>
+        <li><a href="./index.php">Perfil</a></li>
+        <li><a href="./sobre.php">Sobre</a></li>
+        <li><a href="./cadastrar.php">Cadastrar / Login</a></li>
       </ul>
     </div>
   </nav>
