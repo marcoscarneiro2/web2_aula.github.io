@@ -1,7 +1,11 @@
 <?php 
-include_once 'pages/navbar.php';
+ 
 session_start();
 ?>
+ <link rel="stylesheet" href="style.css">
+ <br/>
+ <br/>
+ <br/>
 <article>
   <div class="container" >
     <div class="container" >
@@ -35,7 +39,9 @@ session_start();
             <p class="link">
               Ainda não tem conta?
               <a href="#paracadastro">Cadastre-se</a>
+              <a href="./index.php">Cancelar</a>
             </p>
+           
           </form>
         </div>
         
@@ -70,6 +76,7 @@ session_start();
           <p class="link">  
             Já tem conta?
             <a href="#paralogin"> Ir para Login </a>
+            <a href="./index.php">Cancelar</a>
           </p>
         </form>
       </div>
@@ -77,6 +84,3 @@ session_start();
   </div> 
 </div>
 </article>
-<?php 
-include_once 'pages/footer.php';
-?>

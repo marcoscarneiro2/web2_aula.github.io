@@ -1,5 +1,5 @@
 <?php 
-include_once 'pages/navbar.php';
+include_once 'components/navbar.php';
 ?>
 
 <h3>Desenvolvido por:</h3>
@@ -7,5 +7,5 @@ include_once 'pages/navbar.php';
 <h4>Marcos Paulo Carneiro Tavares</h4>
 
 <?php 
-include_once 'pages/footer.php';
+include_once 'components/footer.php';
 ?>
