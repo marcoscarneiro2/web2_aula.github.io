@@ -1,5 +1,4 @@
 <?php 
- 
 session_start();
 ?>
  <link rel="stylesheet" href="style.css">
@@ -12,39 +11,7 @@ session_start();
       <a class="links" id="paracadastro"></a>
       <a class="links" id="paralogin"></a>
 
-      <div class="content">      
-        <!--FORMULÁRIO DE LOGIN-->
-        <div id="login">
-          <form method="post" action=""> 
-            <h1>Login</h1> 
-            <p> 
-              <label for="email_login">Seu e-mail</label>
-              <input id="email_login" name="email_login" required="required" type="text" placeholder="contato@htmlecsspro.com"/>
-            </p>
-
-            <p> 
-              <label for="senha_login">Sua senha</label>
-              <input id="senha_login" name="senha_login" required="required" type="password" placeholder="1234" /> 
-            </p>
-
-            <p> 
-              <input type="checkbox" name="manterlogado" id="manterlogado" value="" /> 
-              <label for="manterlogado">Manter-me logado</label>
-            </p>
-
-            <p> 
-              <input type="submit" value="Logar" /> 
-            </p>
-
-            <p class="link">
-              Ainda não tem conta?
-              <a href="#paracadastro">Cadastre-se</a>
-              <a href="./index.php">Cancelar</a>
-            </p>
-           
-          </form>
-        </div>
-        
+      <div class="content">            
         <!--FORMULÁRIO DE CADASTRO-->
         <div id="cadastro">
           <form method="POST" action="php/cadastro.php"> 
@@ -75,7 +42,7 @@ session_start();
 
           <p class="link">  
             Já tem conta?
-            <a href="#paralogin"> Ir para Login </a>
+            <a href="./EntrarSistema.php"> Ir para Login </a>
             <a href="./index.php">Cancelar</a>
           </p>
         </form>

@@ -7,7 +7,7 @@ $CEmail = $_POST['email'];
 $CSenha = password_hash($_POST['senha'], PASSWORD_DEFAULT);;
 $CID = rand(5, 15);
 
-// Chegar se existem campos vazios
+// Checar se existem campos vazios
 if (empty($CNome) || empty($CEmail) || empty($CSenha)) {
 
 	echo "Campos Vazios";
