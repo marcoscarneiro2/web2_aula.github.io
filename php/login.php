@@ -30,9 +30,11 @@ if ($result->num_rows > 0) {
         //echo 'Senha Invalida';
         //$_SESSION['mensagem'] = "<div id='btms' style='background-color:red;widht:100%;color:white;text-align:center;padding:1%'>Usuário ou Senha Incorretos</div>";
         $_SESSION['nao_autenticado'] = true;
+        $_SESSION['mensagem'] = "<div id='btms' style='background-color:red;widht:100%;color:white;text-align:center;padding:1%'>Senha inválida!!</div>";
         header('Location:../EntrarSistema.php');
     }
 } else {
-    echo "<br>" . "Erro senha não encontrada: " . "<br>" . $sql . "<br>" . $conn->error;
+    $_SESSION['mensagem'] = "<div id='btms' style='background-color:#DAA520;widht:100%;color:white;text-align:center;padding:1%'>Conta não encontrada!!</div>";
+    header('Location:../EntrarSistema.php');
 }
 ?>

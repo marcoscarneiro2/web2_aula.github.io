@@ -1,12 +1,15 @@
 <?php 
 session_start();
+
 ?>
+
  <link rel="stylesheet" href="style.css">
  <br/>
  <br/>
  <br/>
 <article>
   <div class="container" >
+
     <div class="container" >
       <a class="links" id="paracadastro"></a>
       <a class="links" id="paralogin"></a>
@@ -16,7 +19,14 @@ session_start();
         <div id="login">
           <form method="POST" action="php/login.php"> 
             <h1>Login</h1> 
-            <p> 
+            
+              <?php 
+                if(isset($_SESSION["mensagem"])):
+                print $_SESSION["mensagem"];
+                unset($_SESSION["mensagem"]);
+                endif; 
+              ?>
+              <p> 
               <label for="email_login">Seu e-mail</label>
               <input id="email_login" name="email" required="required" type="text" placeholder="contato@meuprojeto.com"/>
             </p>
@@ -46,4 +56,6 @@ session_start();
     </div>
   </div> 
 </div>
+
 </article>
+
