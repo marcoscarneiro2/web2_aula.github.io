@@ -6,7 +6,7 @@ include_once 'components/navbar.php';
  <br/>
  <br/>
 <article>
-  <div class="container" >
+  <div class="containercd" style="margin-top: 5%">
     <div class="container" >
       <a class="links" id="paracadastro"></a>
       <a class="links" id="paralogin"></a>
@@ -14,7 +14,7 @@ include_once 'components/navbar.php';
       <div class="content">            
         <!--FORMULÁRIO DE CADASTRO-->
         <div id="cadastro">
-          <form method="POST" action="php/#"> 
+          <form method="POST" action="php/cadastrovaga.php"> 
             <h1>Cadastrar vaga</h1> 
 
             <?php if(isset($_SESSION["mensagem"])):
@@ -22,18 +22,23 @@ include_once 'components/navbar.php';
            endif; ?>
            <br/>
            <p> 
-            <label for="nome_cad">Nome da Vaga</label>
-            <input id="nome_cad" name="nome" required type="text" placeholder="Marcos Paulo" />
+            <label>Nome da Vaga</label>
+            <input id="nome_vg" name="nome_vg" required type="text" placeholder="Analista junior" />
           </p>
 
           <p> 
-            <label for="email_cad">Seu e-mail</label>
-            <input id="email_cad" name="email" required type="email" placeholder="contato@meuprojeto.com"/> 
+            <label>Nome da empresa</label>
+            <input id="nomeemp_vg" name="nomeemp_vg" required type="text" placeholder="vagasTi" /> 
           </p>
 
           <p> 
-            <label for="senha_cad">Sua senha</label>
-            <input id="senha_cad" name="senha" required type="password" placeholder="1234"/>
+            <label >Descrição da vaga</label><br/>
+            <textarea rows="10" cols="60" maxlength="255"  name="descricao" required  placeholder="Descreva a vaga"></textarea>
+          </p>
+
+          <p> 
+            <label >Faixa Salaria</label>
+            <input id="senha_cad" name="faisalarial" required type="number" placeholder="R$ 1000.00" />
           </p>
 
           <p> 
@@ -48,9 +53,12 @@ include_once 'components/navbar.php';
   </div> 
 </div>
 </article>
+<br/>
+ <br/>
+ <br/>
 
 
 
 <?php 
 include_once 'components/footer.php';
-?>
+?> 

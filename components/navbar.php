@@ -27,7 +27,7 @@
             <img style="height:25px" src="./img/icon/home-solid.svg" alt="meu icone">
            <b> Home</b>
         </a></li>
-        <li><a href="#"><img style="height:25px" src="./img/icon/file-alt-solid.svg" alt="meu icone">
+        <li><a href="./vagas.php"><img style="height:25px" src="./img/icon/file-alt-solid.svg" alt="meu icone">
           <b>Vagas</b>
         </a></li>
 

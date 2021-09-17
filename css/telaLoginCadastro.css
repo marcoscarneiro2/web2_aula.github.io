@@ -3,6 +3,11 @@
     padding:0;
     font-family: Arial,sans-serif;
   }
+  body { 
+    margin:0;
+    padding:0;
+    height:1000px;
+  }
     
   a{
     text-decoration: none;
@@ -14,14 +19,14 @@
   }
   
   /* content que contem os formulários */
-  .content{
+  .containercd .content{
     width: 500px;
     margin: 0px auto;
     position: relative; 
   }
   
   /* formatando o cabeçalho dos formulários */
-  h1{
+  .containercd h1{
     font-size: 48px;
     color: #066a75;
     padding: 10px 0;
@@ -30,7 +35,7 @@
     text-align: center;
     padding-bottom: 30px;
   }
-  h1:after{
+  .containercd h1:after{
     content: ' ';
     display: block;
     width: 100%;
@@ -40,33 +45,33 @@
     background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
   }
   
-  p{
+  .containercd p{
     margin-bottom:15px;
   }
-  p:first-child{
+  .containercd p:first-child{
     margin: 0px;
   }
-  label{
+  .containercd label{
     color: #405c60;
     position: relative;
   }
   
   /**** advanced input styling ****/
   /* placeholder */
-  ::-webkit-input-placeholder  {
+  .containercd ::-webkit-input-placeholder  {
     color: #bebcbc; 
     font-style: italic;
   }
-  input:-moz-placeholder,
-  textarea:-moz-placeholder{
+  .containercd input:-moz-placeholder,
+  .containercd textarea:-moz-placeholder{
     color: #bebcbc;
     font-style: italic;
   } 
-  input {
+  .containercd input {
     outline: none;
   }
   
-  input:not([type="checkbox"]){
+  .containercd input:not([type="checkbox"]){
     width: 95%;
     margin-top: 4px;
     padding: 10px;  
@@ -83,7 +88,7 @@
   }
   
   /*estilo do botão submit */
-  input[type="submit"]{
+  .containercd input[type="submit"]{
     width: 100%!important;
     cursor: pointer;  
     background: #3d9db3;
@@ -99,12 +104,12 @@
     
     transition: all 0.2s linear;
   }
-  input[type="submit"]:hover{
+  .containercd input[type="submit"]:hover{
     background: #4ab3c6;
   }
   
   /*marcando os links para mudar de um formulário para outro */
-  .link{
+  .containercd .link{
     position: absolute;
     background: #e1eaeb;
     color: #7f7c7c;
@@ -119,7 +124,7 @@
     -webkit-border-radius: 0 0  5px 5px;
     border-radius: 0 0  5px 5px;
   }
-  .link a {
+  .containercd .link a {
     font-weight: bold;
     background: #f7f8f1;
     padding: 6px;
@@ -133,15 +138,15 @@
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s  linear;
   }
-  .link a:hover {
+  .containercd .link a:hover {
     color: #39bfd7;
     background: #f7f7f7;
     border: 1px solid #4ab3c6;
   }
   
   /* estilos para para ambos os formulários */
-  #cadastro, 
-  #login{
+  .containercd #cadastro, 
+  .containercd #login{
     position: absolute;
     top: 0px;
     width: 88%; 
@@ -161,8 +166,8 @@
     animation-fill-mode: both;
   }
   
-  #paracadastro:target ~ .content #cadastro,
-  #paralogin:target ~ .content #login{
+  .containercd #paracadastro:target ~ .content #cadastro,
+  .containercd #paralogin:target ~ .content #login{
     z-index: 2;
     -webkit-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
@@ -170,8 +175,8 @@
     -webkit-animation-delay: .1s;
     animation-delay: .1s;
   }
-  #registro:target ~ .content #login,
-  #paralogin:target ~ .content #cadastro{
+  .containercd #registro:target ~ .content #login,
+  .containercd #paralogin:target ~ .content #cadastro{
     -webkit-animation-name: fadeOutLeft;
     animation-name: fadeOutLeft;
   }

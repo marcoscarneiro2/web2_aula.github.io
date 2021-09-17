@@ -3,6 +3,8 @@ nav{
   height: 80px;
   width: 100%;
   box-shadow: 1px 1px 8px 1px rgb(34, 34, 34);
+ /* position:fixed;
+  z-index:20; */
 }
 label.logo{
   color: #066a75;
@@ -69,6 +71,7 @@ a.active,a:hover{
     left: -100%;
     text-align: center;
     transition: all .5s;
+    z-index:20;
   }
   nav ul li{
     display: block;
