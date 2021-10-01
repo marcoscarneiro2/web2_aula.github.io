@@ -32,7 +32,7 @@
         </a></li>
 
       <?php if(!isset($_SESSION['email'])): ?>
-         <li><a style="background-color:#066a75;color:white;" class="active" class="botao" href="./cadastrar.php">Cadastrar / Login</a></li>              
+         <li><a style="background-color:#066a75;color:white;" class="active" class="botao" href="./EntrarSistema.php">Cadastrar / Login</a></li>              
       <?php endif; ?> 
 
       <?php
@@ -41,7 +41,7 @@
       ?>
         <li><a href="#"><img style="height:35px" src="./img/icon/user-circle-regular.svg" alt="meu icone"></a>
           <ul>
-	          <li><a id="sm" href="./perfil.php"><b>Perfil</b></a></li>
+	          <li><a id="sm" href="./Telaperfil.php"><b>Perfil</b></a></li>
 	          <li><a id="sm" href="./cadastrarvaga.php"><b>Cadastrar Vaga</b></a></li>
 	          <li><a id="sm" href="./php/logout.php"><b>Logout</b></a></li>
 	       	</ul> 

@@ -30,5 +30,5 @@ if(($query) AND ($query->num_rows != 0)){
         echo '</div>';
 	}
 }else{
-	echo "Nenhuma vaga disponível";
+	echo "<h1 style='position: relative;margin: 10% 10% 0% 40%'> Nenhuma vaga disponível </h1>";
 }
