@@ -1,0 +1,9 @@
+footer {
+    text-align: center;
+    padding: 1% 0 1% 0;
+    background-color: white;
+    box-shadow: 1px 1px 8px 1px rgb(34, 34, 34);
+    color: #066a75;
+    margin-top:800px;
+    width: 100%;
+}
