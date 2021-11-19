@@ -1,0 +1,88 @@
+.cardcontainervaga{
+    width: 70%;
+    height:auto;
+    background-color:rgb(248, 247, 247); 
+    box-shadow: 1px 1px 10px 3px gray;
+    margin: 3% auto;
+    position: relative; 
+    padding: 2%;
+}
+.titulocard{
+    display: inline-block;
+    width:100%;
+}
+
+.cardcontainervaga #cd1{
+    float:left;
+    width:50%;
+}
+
+.cardcontainervaga #cd1 h1{
+    font-size:25px;
+}
+.cardcontainervaga .titulocard #botao{
+    width: 70%;
+    margin-top: 4px;
+    padding: 10px;  
+    border: 1px solid #066a75; 
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    color: #066a75;
+    font-size: 15px;
+}
+
+.cardcontainervaga .titulocard span{
+    
+    color: #066a75;
+    font-size:15px;
+}
+.cardcontainervaga .titulocard h3{
+    font-size:15px;
+    margin: 2% 0 2% 0;
+}
+.cardcontainervaga .titulocard p{
+    
+    font-size:15px;
+}
+
+.cardcontainervaga #cd2{
+    width:50%;
+    float:right;
+    
+}
+
+.cardcontainervaga .descricao{
+    width:100%;
+}
+
+.cardcontainervaga .descricao h2{
+    font-size:16px;
+}
+
+.cardcontainervaga .descricao p{
+    font-size:15px;
+    margin:1% 0 2% 0;
+}
+
+.mainvaga #btt{
+    text-align:center;
+}
+
+.mainvaga #botao{
+    width: 100%;
+    margin-top: 4px;
+    padding: 10px;  
+    border: 1px solid #066a75; 
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    color: #066a75;
+    font-size: 15px;
+}
