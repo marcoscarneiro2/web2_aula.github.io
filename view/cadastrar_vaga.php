@@ -15,34 +15,61 @@ include_once '../assets/components/navbar.php';
         <!--FORMULÁRIO DE CADASTRO-->
         <div id="cadastro">
           <form method="POST" action="../assets/php/cadastrovaga.php" enctype="multipart/form-data"> 
-            <h1>Cadastrar produto</h1> 
+            <h1>Cadastrar vaga</h1> 
 
             <?php if(isset($_SESSION["mensagem"])):
              print $_SESSION["mensagem"];
            endif; ?>
            <br/>
            <p> 
-            <label>Nome do produto</label>
-            <input id="nome_vg" name="nome_pd" required type="text" placeholder="Placa-mãe" />
+            <label>Nome da vaga</label>
+            <input id="nome_vg" name="nome_pd" required type="text" placeholder="vaga help-desk senior" />
           </p>
 
           <p> 
-            <label>Foto do produto</label>
-            <input id="nomeemp_vg" name="arquivo" type="file" accept="image/png,image/jpeg" /> 
+            <label >Descrição da vaga</label><br/>
+            <textarea style="border: 1px solid #066a75;border-radius:3px" rows="10" cols="60" maxlength="255"  name="descricao" required  placeholder="Descreva a vaga"></textarea>
           </p>
 
           <p> 
-            <label >Descrição do produto</label><br/>
-            <textarea rows="10" cols="60" maxlength="255"  name="descricao" required  placeholder="Descreva a vaga"></textarea>
+          <label for="escolaridade">
+          <label >Escolaridade</label>
+                <select style="height:auto;padding:2%;border: 1px solid #066a75;width:100%;border-radius:3px" name="escolaridade" id="escolaridade">
+                    <option value="Outros"></option>
+                    <option value="Masculino">Ensino Fundamental Completo</option>
+                    <option value="Feminino">Ensino médio incompleto</option> 
+                    <option value="Feminino">Ensino médio completo</option> 
+                    <option value="Feminino">Ensino superior incompleto</option> 
+                    <option value="Feminino">Ensino superior completo</option> 
+               </select>
+            </label>
           </p>
 
           <p> 
-            <label >Valor</label>
+          <label for="tipoDeContrato">
+          <label >Tipo de Contrato</label>
+                <select style="height:auto;padding:2%;border: 1px solid #066a75;width:100%;border-radius:3px" name="tipoDeContrato" id="tipoDeContrato">
+                    <option></option>
+                    <option value="Masculino">CLT</option>
+                    <option value="Feminino">PJ</option> 
+                    <option value="Feminino">Estágio</option> 
+                    <option value="Feminino">Temporário</option>  
+               </select>
+            </label>
+          </p>
+
+          <p> 
+            <label >Exigencias</label><br/>
+            <textarea style="border: 1px solid #066a75;border-radius:3px" rows="10" cols="60" maxlength="255"  name="descricao" required  placeholder="Descreva a vaga"></textarea>
+          </p>
+
+          <p> 
+            <label >Faixa Salarial</label>
             <input id="senha_cad" name="valor" required type="number" placeholder="R$ 1000.00" />
           </p>
 
           <p> 
-            <label >Quantidade</label>
+            <label >Quantidade de vagas</label>
             <input id="senha_cad" name="quantidade" required type="number" placeholder="1" />
           </p>
 
@@ -64,6 +91,6 @@ include_once '../assets/components/navbar.php';
 
 
 
-<?php 
-include_once 'components/footer.php';
+ <?php 
+include_once '../assets/components/footer.php';
 ?> 

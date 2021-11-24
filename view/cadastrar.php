@@ -38,6 +38,16 @@ session_start();
           </p>
 
           <p> 
+          <label for="escolha">
+          <label >Olá, você veio: </label>
+                <select style="height:auto;padding:2%;border: 1px solid #066a75;width:100%;border-radius:3px" name="escolha" id="escolha">
+                    <option value="candidato">Buscar vaga</option>
+                    <option value="empresa">Buscar colaboradores</option>
+               </select>
+            </label>
+          </p>
+
+          <p> 
             <input type="submit" value="Cadastrar"/> 
           </p>
 

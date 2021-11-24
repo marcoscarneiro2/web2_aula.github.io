@@ -2,7 +2,7 @@
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
-$banco = "web2loja";
+$banco = "jobs";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password,$banco);
