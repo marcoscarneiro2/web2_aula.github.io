@@ -16,8 +16,9 @@ session_start();
       <div class="content">      
         <!--FORMULÁRIO DE LOGIN-->
         <div id="login">
-          <form method="POST" action="../assets/php/login.php"> 
-            <h1>Login</h1> 
+          <form method="POST" action="../assets/php/ContinuarCadastro.php"> 
+            <h1 style="font-size:23px">Continuar Cadastro</h1> 
+            <p style="text-align:center">Logue na sua conta para poder continuar o cadastro</p>
             
               <?php 
                 if(isset($_SESSION["mensagem"])):
@@ -44,14 +45,8 @@ session_start();
                </select>
             </label>
           </p>
-
             <p> 
-              <input type="checkbox" name="manterlogado" id="manterlogado" value="" /> 
-              <label for="manterlogado">Manter-me logado</label>
-            </p>
-
-            <p> 
-              <input type="submit" value="Logar" /> 
+              <input type="submit" value="Avançar" /> 
             </p>
 
             <p class="link">

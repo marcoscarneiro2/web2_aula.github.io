@@ -109,14 +109,15 @@ a.active,a:hover{
   display: none;
   right: 0;
   position: absolute;
-  background-color: #066a75;
+  background-color: white;
   text-align: center;
   line-height: 40px;
+  z-index: 4;
 }
 
 .dp-menu ul li:hover ul {
   display: block;
-  
+  color: white;
 }
 
 .dp-menu ul ul {

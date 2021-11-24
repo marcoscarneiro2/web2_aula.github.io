@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once 'conexao.php';
+$ID_usuario = $_SESSION['ID_usuario'];
 
 $celular = $_POST['celular'];
 $desempresa = $_POST['desempresa'];
@@ -26,8 +27,8 @@ if (empty($celular)) {
 	$novo_nome = md5(time()).$extensao;
 	$diretorio = "../../assets/img/foto_empresa/";
     $last_id = mysqli_insert_id($conn);
-		$sql = "INSERT INTO `empresa`(`telefone`, `descricao_empresa`, `categoria`, `imagem_empresa`, `cep`, `rua`, `bairro`, `estado`, `sobre`, `idUsuario`, `website`, `twitter`, `instagram`, `facebook`) 
-        VALUES ('".$celular."','".$desempresa."','".$categoria."','".$novo_nome."','".$cep."','".$rua."','".$bairro."','".$estado."','".$sobre."','".$last_id."','".$website."','".$twitter."','".$instagram."','".$facebook."')";
+		$sql = "INSERT INTO empresa(ID_empresa,telefone,descricao_empresa,categoria,imagem_empresa,cep,rua,bairro,estado,sobre,idUsuario,website,twitter,instagram,facebook) 
+        VALUES (null,'".$celular."','".$desempresa."','".$categoria."','".$novo_nome."','".$cep."','".$rua."','".$bairro."','".$estado."','".$sobre."','".$ID_usuario."','".$website."','".$twitter."','".$instagram."','".$facebook."')";
 
 		if ($conn->query($sql) === TRUE) {
 			//echo "Novo registro criado com sucesso";

@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once 'conexao.php';
+$ID_usuario = $_SESSION['ID_usuario'];
 
 $telefone = $_POST['telefone'];
 $celular = $_POST['celular'];
@@ -29,10 +30,9 @@ if (empty($telefone) || empty($celular) || empty($estadocivil)) {
 	$extensao = strtolower(substr($_FILES['curriculo']['name'],-4));
 	$novo_nome = md5(time()).$extensao;
 	$diretorio = "../../assets/curriculos/";
-    $last_id = mysqli_insert_id($conn);
-	
-		$sql = "INSERT INTO candidato(telefone,celular,curriculo,estado_civil,filhos,escolaridade,nacionalidade,descricao_candidato,cep,rua,bairro,estado,website,github,twitter,instagram,facebook,idUsuario) 
-		VALUES ('".$telefone."','".$celular."','".$novo_nome."','".$estadocivil."','".$filhos."','".$escolaridade."','".$nacionalidade."','".$sobre."','".$cep."','".$rua."','".$bairro."','".$estado."','".$website."','".$github."','".$twitter."','".$instagram."','".$facebook."','".$last_id."')";
+   	
+		$sql = "INSERT INTO candidato(ID_candidato,telefone,celular,curriculo,estado_civil,filhos,escolaridade,nacionalidade,sobre,cep,rua,bairro,estado,website,github,twitter,instagram,facebook,idUsuario) 
+		VALUES (null,'".$telefone."','".$celular."','".$novo_nome."','".$estadocivil."','".$filhos."','".$escolaridade."','".$nacionalidade."','".$sobre."','".$cep."','".$rua."','".$bairro."','".$estado."','".$website."','".$github."','".$twitter."','".$instagram."','".$facebook."', '".$ID_usuario."')";
 
 		if ($conn->query($sql) === TRUE) {
 			//echo "Novo registro criado com sucesso";
@@ -42,7 +42,7 @@ if (empty($telefone) || empty($celular) || empty($estadocivil)) {
 		} else {
 			//echo "Error: " . $sql . "<br>" . $conn->error;
 			$_SESSION['mensagem'] = "<div id='btms' style='background-color:red;widht:100%;color:white;text-align:center;padding:1%'>Usuário não foi cadastrado!!</div>";
-			header("location:../../view/TelaCandidato.php");
+			header("location:../../view/TelaCandidato.php?ID_usuario='.$ID_usuario");
 		}
 
 	

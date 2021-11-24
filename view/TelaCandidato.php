@@ -33,10 +33,6 @@ session_start();
             <input id="nome_cad" name="celular"  type="text" placeholder="(21) 98354-4893" />
           </p>
           <p> 
-            <label for="nome_cad">CPF</label>
-            <input id="nome_cad" name="cpf"  type="text" placeholder="123.456.789-05" />
-          </p>
-          <p> 
             <label>Currículo</label>
             <input id="nomeemp_vg" name="curriculo" type="file" accept="application/pdf" /> 
           </p>
@@ -65,12 +61,12 @@ session_start();
           <label for="escolaridade">
           <label >Escolaridade</label>
                 <select style="height:auto;padding:2%;border: 1px solid #066a75;width:100%;border-radius:3px" name="escolaridade" id="escolaridade">
-                    <option value="Outros"></option>
-                    <option value="Masculino">Ensino Fundamental Completo</option>
-                    <option value="Feminino">Ensino médio incompleto</option> 
-                    <option value="Feminino">Ensino médio completo</option> 
-                    <option value="Feminino">Ensino superior incompleto</option> 
-                    <option value="Feminino">Ensino superior completo</option> 
+                    <option></option>
+                    <option value="Fundamental Completo">Ensino Fundamental Completo</option>
+                    <option value="Medio incompleto">Ensino médio incompleto</option> 
+                    <option value="Medio completo">Ensino médio completo</option> 
+                    <option value="Superior incompleto">Ensino superior incompleto</option> 
+                    <option value="Superior Completo">Ensino superior completo</option> 
                </select>
             </label>
           </p>

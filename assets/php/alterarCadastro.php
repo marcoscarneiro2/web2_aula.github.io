@@ -3,21 +3,23 @@ include_once 'conexao.php';
 session_start();
 $email = $_SESSION['email'];
 
-$id_usuario = $_SESSION['id_usuario'];
-$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
-$senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
-$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);        
+$ID_usuario = $_SESSION['ID_usuario'];
+$telefone = $_POST['telefone'];
+$celular = $_POST['celular'];
+$rua = $_POST['rua'];
+$bairro = $_POST['bairro'];
+$estado = $_POST['estado'];
+ 
 
-    $sql = "UPDATE usuario SET nome = '$nome', senha = '$senha', email = '$email' WHERE id_usuario = '$id_usuario'";
+    $sql = "UPDATE candidato SET telefone = '$telefone', rua = '$rua', bairro = '$bairro',estado = '$estado' WHERE idUsuario = '$ID_usuario'";
     
-    $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+    $result = $conn->query($sql);
 
-$row = mysqli_affected_rows($conn);  
-if( $row == 1){
+if( $result->num_rows > 0){
     $_SESSION['mensagem'] = "<div id='btms' style='background-color:green;widht:100%;color:white;text-align:center;padding:1%'>Usuário alterado com sucesso!!</div>";
     clearstatcache();
-    header("location:../index.php");
+    header("location:../../view/Telaperfil.php");
 }else{
     $_SESSION['mensagem'] = "<div id='btms' style='background-color:red;widht:100%;color:white;text-align:center;padding:1%'>Usuário não foi alterado!!</div>";
-		header("location:../index.php");
+		header("location:../../view/alterar_Cadastro.php?ID_usuario=<?= $_SESSION[ID_usuario] ?>");
 }
